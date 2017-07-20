@@ -24,6 +24,7 @@ const state = {
         { id: 8, name: '饮食', isActive: false, linkTo: '/type/drink' },
         { id: 9, name: '志趣', isActive: false, linkTo: '/type/hobby' }
     ],
+
     mylist: [
         { id: 0, name: '全部', isActive: true, linkTo: '/self/mylist' },
         { id: 1, name: '待付款', isActive: false, linkTo: '/mylist/notpay' },
