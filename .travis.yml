@@ -41,4 +41,4 @@ after_success:
 # Note: you should set Environment Variables here or 'Settings' on travis-ci.org
 env:
   global:
-    - GH_REF: git@github.com:SmartWuJun/vue-yanxuan.git
+    - GH_REF: github.com/SmartWuJun/vue-yanxuan.git
