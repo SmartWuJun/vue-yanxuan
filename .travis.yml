@@ -25,7 +25,7 @@ install:
 before_script:
   - git config --global user.name "wj"
   - git config --global user.email "yeqinghanwj@sina.com"
-  - git clone --branch master https://${GH_REF} dist
+  - git clone --branch gh-pages https://${GH_REF} dist
 
 script:
   - npm test
@@ -33,12 +33,11 @@ script:
 after_success:
   - npm run build
   - cd dist
-  //- echo "lightmoon.pw" > CNAME
+
   - cp index.html 404.html
   - git add --all .
   - git commit --message "Automatically update from travis-ci"
-  - git push --quiet --force  "https://${GH_TOKEN}@${GH_REF}" master:master
-
+  - git push --quiet --force  "https://${GH_TOKEN}@${GH_REF}" gh-pages:gh-pages
 # Note: you should set Environment Variables here or 'Settings' on travis-ci.org
 env:
   global:
